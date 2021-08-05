@@ -32,7 +32,6 @@ resource "aws_lb" "apache-alb" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
-  security_groups    = [aws_security_group.albsg.id]
   subnets            = ["${aws_subnet.pubsubnets[1].id}", "${aws_subnet.pubsubnets[2].id}"]
 
   enable_deletion_protection = true

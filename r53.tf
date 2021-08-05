@@ -10,9 +10,9 @@ resource "aws_route53_zone" "kkmn-hostedzone" {
 
 
 
-resource "aws_route53_record" "apache2" {
+resource "aws_route53_record" "apache3" {
   zone_id = aws_route53_zone.kkmn-hostedzone.zone_id
-  name    = "apache2.kkmn.info"
+  name    = "apache3.kkmn.info"
   type    = "A"
   ttl     = "300"
   records = [aws_eip.nateip.public_ip]
